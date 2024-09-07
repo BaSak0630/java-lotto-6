@@ -12,19 +12,9 @@ import static camp.nextstep.edu.missionutils.Console.readLine;
  * 저작권 주의
  */
 public class LottoService {
-    private TotalAmount totalAmount;
+    TotalAmount totalAmount = new TotalAmount();
+    LottoCollection lottoCollection;
     public void play() {
-        totalAmount = new TotalAmount();
-        getBuyAmount();
-    }
-
-    private void getBuyAmount() {
-        System.out.println("구입금액을 입력해 주세요");
-        /*try {
-            buyAmount = Integer.parseInt(readLine());
-
-        }catch (Exception e) {
-            throw new IllegalArgumentException("[ERROR] 로또 구입 금액은 1,000원으로 나누어 떨어지는 숫자여야합니다.");
-        }*/
+        totalAmount.setBuyAmount();
     }
 }

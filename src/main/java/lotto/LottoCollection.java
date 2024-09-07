@@ -13,6 +13,7 @@ import java.util.List;
  */
 public class LottoCollection {
     private List<Lotto> lottos;
-    public LottoCollection(int numberOfLottos) {
+    public LottoCollection(int numOfLottos) {
+
     }
 }
