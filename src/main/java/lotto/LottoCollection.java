@@ -18,16 +18,15 @@ public class LottoCollection {
     static final int LOTTO_SIZE = 6;
     private List<Lotto> lottos;
     public LottoCollection(int numOfLottos) {
-        System.out.println(numOfLottos + "개를 구매했습니다.");
+        System.out.println(numOfLottos + "개를 구매했습니다.\n");
         lottos = new ArrayList<>();
-        for (int i = 0; i < numOfLottos; i++) {
+        for (int i = 0; i < LOTTO_SIZE; i++) {
             lottos.add(new Lotto(makeRandomNumber()));
         }
     }
 
     private List<Integer> makeRandomNumber() {
-        List<Integer> numbers = Randoms.pickUniqueNumbersInRange(1, 45, 6);
-        return numbers;
+        return Randoms.pickUniqueNumbersInRange(1, 45, 6);
     }
 
     public void printLottos() {
