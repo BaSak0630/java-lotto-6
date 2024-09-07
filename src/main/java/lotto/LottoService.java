@@ -16,5 +16,7 @@ public class LottoService {
     LottoCollection lottoCollection;
     public void play() {
         totalAmount.setBuyAmount();
+        lottoCollection = new LottoCollection(totalAmount.getNumOfLotto());
+        lottoCollection.printLottos();
     }
 }

@@ -37,4 +37,8 @@ public class TotalAmount {
 
         numOfLotto = this.buyAmount / 1000;
     }
+
+    public int getNumOfLotto() {
+        return numOfLotto;
+    }
 }
