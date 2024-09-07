@@ -12,8 +12,9 @@ import static camp.nextstep.edu.missionutils.Console.readLine;
  * 저작권 주의
  */
 public class LottoService {
-    private Integer buyAmount;
+    private TotalAmount totalAmount;
     public void play() {
+        totalAmount = new TotalAmount();
         getBuyAmount();
     }
 
