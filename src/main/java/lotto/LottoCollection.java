@@ -25,8 +25,12 @@ public class LottoCollection {
     }
 
     private List<Integer> makeRandomNumber() {
-        return Randoms.pickUniqueNumbersInRange(1, 45, 6);
+        List<Integer> randomNumber = Randoms.pickUniqueNumbersInRange(1, 45, 6);
+        randomNumber.sort(Integer::compareTo);
+
+        return randomNumber;
     }
+
 
     public void printLottos() {
         for(Lotto lotto : lottos) {
