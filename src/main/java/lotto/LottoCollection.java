@@ -17,7 +17,7 @@ import java.util.List;
 public class LottoCollection {
     private List<Lotto> lottos;
     public LottoCollection(int numOfLottos) {
-        System.out.println(numOfLottos + "개를 구매했습니다.\n");
+        System.out.println(numOfLottos + "개를 구매했습니다.");
         lottos = new ArrayList<>();
         for (int i = 0; i <numOfLottos; i++) {
             lottos.add(new Lotto(makeRandomNumber()));
@@ -36,6 +36,6 @@ public class LottoCollection {
         for(Lotto lotto : lottos) {
             System.out.println(lotto.toString());
         }
-        System.out.println("\n");
+        System.out.println();
     }
 }

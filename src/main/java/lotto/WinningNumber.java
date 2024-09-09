@@ -28,6 +28,7 @@ public class WinningNumber {
     private void getWinningNumbers() {
         System.out.println("당첨 번호를 입력해 주세요.");
         String readLine = readLine();
+        System.out.println();
         String [] numbers = readLine.split(",");
         try{
             for (int i = 0; i < LOTTO_SIZE; i++) {
@@ -37,7 +38,6 @@ public class WinningNumber {
             throw new IllegalArgumentException("[ERROR] 당첨 번호는 숫자여야합니다.");
         }
         if (winningNumList.size() != LOTTO_SIZE) throw new IllegalArgumentException("[ERROR] 당첨 번호는 6개만 가능합니다.");
-        System.out.println("\n");
     }
 
     private void validateWinningNumber(List<Integer> winningNumList) {

@@ -32,6 +32,6 @@ public class BonusNumber {
             throw new IllegalArgumentException("[ERROR] 보너스 번호는 숫자여야합니다.");
         }
 
-        System.out.println("\n");
+        System.out.println();
     }
 }
