@@ -1,7 +1,9 @@
 package lotto;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import static camp.nextstep.edu.missionutils.Console.readLine;
 
@@ -19,7 +21,8 @@ public class WinningNumber {
     List<Integer> winningNumList = new ArrayList<>();
     public WinningNumber() {
         getWinningNumbers();
-        validateWinningNumber();
+        validateWinningNumber(winningNumList);
+        validatDuplication(winningNumList);
     }
 
     private void getWinningNumbers() {
@@ -36,10 +39,16 @@ public class WinningNumber {
         if (winningNumList.size() != LOTTO_SIZE) throw new IllegalArgumentException("[ERROR] 당첨 번호는 6개만 가능합니다.");
     }
 
-    private void validateWinningNumber() {
+    private void validateWinningNumber(List<Integer> winningNumList) {
         for (Integer num : winningNumList) {
             if (num < 0 || num > 45) throw new IllegalArgumentException("[ERROR] 보너스 번호는 1~45사이 숫자여야합니다.");
         }
+    }
+
+    private void validatDuplication(List<Integer> winningNumList){
+        Set<Integer> duplicateSet = new HashSet<>(winningNumList);
+
+        if(duplicateSet.size()!= winningNumList.size()) throw new IllegalArgumentException("[ERROR] 당첨 번호는 중복을 허용하지 않습니다.");
     }
 
 }
