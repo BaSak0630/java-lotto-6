@@ -15,12 +15,11 @@ import java.util.List;
  * 저작권 주의
  */
 public class LottoCollection {
-    static final int LOTTO_SIZE = 6;
     private List<Lotto> lottos;
     public LottoCollection(int numOfLottos) {
         System.out.println(numOfLottos + "개를 구매했습니다.\n");
         lottos = new ArrayList<>();
-        for (int i = 0; i < LOTTO_SIZE; i++) {
+        for (int i = 0; i <numOfLottos; i++) {
             lottos.add(new Lotto(makeRandomNumber()));
         }
     }

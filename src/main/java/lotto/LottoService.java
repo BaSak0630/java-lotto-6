@@ -15,11 +15,13 @@ public class LottoService {
     private TotalAmount totalAmount;
     private LottoCollection lottoCollection;
     private WinningNumber winningNumber;
+    private BonusNumber bonusNumber;
     public void play() {
         totalAmount = new TotalAmount();
         totalAmount.setBuyAmount();
         lottoCollection = new LottoCollection(totalAmount.getNumOfLotto());
         lottoCollection.printLottos();
         winningNumber = new WinningNumber();
+        bonusNumber = new BonusNumber();
     }
 }
