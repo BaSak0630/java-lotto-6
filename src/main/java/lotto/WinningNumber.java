@@ -19,6 +19,7 @@ public class WinningNumber {
     List<Integer> winningNumList = new ArrayList<>();
     public WinningNumber() {
         getWinningNumbers();
+        validateWinningNumber();
     }
 
     private void getWinningNumbers() {
@@ -33,6 +34,12 @@ public class WinningNumber {
             throw new IllegalArgumentException("[ERROR] 당첨 번호는 숫자여야합니다.");
         }
         if (winningNumList.size() != LOTTO_SIZE) throw new IllegalArgumentException("[ERROR] 당첨 번호는 6개만 가능합니다.");
+    }
+
+    private void validateWinningNumber() {
+        for (Integer num : winningNumList) {
+            if (num < 0 || num > 45) throw new IllegalArgumentException("[ERROR] 보너스 번호는 1~45사이 숫자여야합니다.");
+        }
     }
 
 }
