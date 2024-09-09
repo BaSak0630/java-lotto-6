@@ -36,5 +36,6 @@ public class LottoCollection {
         for(Lotto lotto : lottos) {
             System.out.println(lotto.toString());
         }
+        System.out.println("\n");
     }
 }

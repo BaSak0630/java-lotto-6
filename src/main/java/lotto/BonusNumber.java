@@ -21,15 +21,17 @@ public class BonusNumber {
         if (number < 0 || number > 45) throw new IllegalArgumentException("[ERROR] 보너스 번호는 1~45사이 숫자여야합니다.");
     }
 
-    public int getNumber() {
+    public void getNumber() {
         int num;
         System.out.println("보너스 번호를 입력해 주세요.");
+
         try {
             num = Integer.parseInt(readLine());
             this.number = num;
         }catch (Exception e) {
             throw new IllegalArgumentException("[ERROR] 보너스 번호는 숫자여야합니다.");
         }
-        return num;
+
+        System.out.println("\n");
     }
 }
