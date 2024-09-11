@@ -23,5 +23,6 @@ public class LottoService {
         lottoCollection.printLottos();
         winningNumber = new WinningNumber();
         bonusNumber = new BonusNumber();
+        lottoCollection.compareWinningNumAndBonusNum(winningNumber,bonusNumber);
     }
 }

@@ -22,7 +22,7 @@ public class WinningNumber {
     public WinningNumber() {
         getWinningNumbers();
         validateWinningNumber(winningNumList);
-        validatDuplication(winningNumList);
+        validateDuplication(winningNumList);
     }
 
     private void getWinningNumbers() {
@@ -46,7 +46,7 @@ public class WinningNumber {
         }
     }
 
-    private void validatDuplication(List<Integer> winningNumList){
+    private void validateDuplication(List<Integer> winningNumList){
         Set<Integer> duplicateSet = new HashSet<>(winningNumList);
 
         if(duplicateSet.size()!= winningNumList.size()) throw new IllegalArgumentException("[ERROR] 당첨 번호는 중복을 허용하지 않습니다.");

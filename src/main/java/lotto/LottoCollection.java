@@ -38,4 +38,8 @@ public class LottoCollection {
         }
         System.out.println();
     }
+
+    public void compareWinningNumAndBonusNum(WinningNumber winningNumber, BonusNumber bonusNumber) {
+
+    }
 }
