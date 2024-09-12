@@ -10,4 +10,10 @@ package lotto;
  * 저작권 주의
  */
 public class WinningLotter {
+    private Lotto lotto;
+    private Rank rank;
+    public WinningLotter(Lotto lotto, Rank rank) {
+        this.lotto = lotto;
+        this.rank = rank;
+    }
 }

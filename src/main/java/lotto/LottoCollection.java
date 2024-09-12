@@ -16,9 +16,12 @@ import java.util.List;
  */
 public class LottoCollection {
     private List<Lotto> lottos;
+    private List<WinningLotter> winningLotters;
     public LottoCollection(int numOfLottos) {
-        System.out.println(numOfLottos + "개를 구매했습니다.");
         lottos = new ArrayList<>();
+        winningLotters = null;
+
+        System.out.println(numOfLottos + "개를 구매했습니다.");
         for (int i = 0; i <numOfLottos; i++) {
             lottos.add(new Lotto(makeRandomNumber()));
         }
@@ -41,7 +44,8 @@ public class LottoCollection {
 
     public void compareWinningNumAndBonusNum(WinningNumber winningNumber, BonusNumber bonusNumber) {
         for(Lotto lotto : lottos) {
-            winningNumber.compareLotto(lotto, bonusNumber);
+            Rank rank = lotto.getRank(winningNumber, bonusNumber);
+            winningLotters.add(new WinningLotter(lotto, rank));
         }
     }
 }

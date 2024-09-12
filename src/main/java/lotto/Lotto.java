@@ -1,5 +1,6 @@
 package lotto;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -45,4 +46,17 @@ public class Lotto {
         return numbers.toString();
     }
 
+    public Rank getRank(WinningNumber winningNumber, BonusNumber bonusNumber) {
+        boolean bonus = false;
+        int matchingCount = winningNumber.getMatchingCount(numbers);
+        if(matchingCount == 5) {
+            bonus = bonusNumber.isBonus(numbers);
+        }
+        boolean finalBonus = bonus;
+
+        return Arrays.stream(Rank.values())
+                .filter(rank -> rank.getResult(matchingCount, finalBonus))
+                .findFirst()
+                .orElse(Rank.NON);
+    }
 }

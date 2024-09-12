@@ -20,5 +20,7 @@ public class LottoService {
         BonusNumber bonusNumber = new BonusNumber();
 
         lottoCollection.compareWinningNumAndBonusNum(winningNumber, bonusNumber);
+
+
     }
 }
