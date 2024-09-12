@@ -40,6 +40,8 @@ public class LottoCollection {
     }
 
     public void compareWinningNumAndBonusNum(WinningNumber winningNumber, BonusNumber bonusNumber) {
-
+        for(Lotto lotto : lottos) {
+            winningNumber.compareLotto(lotto, bonusNumber);
+        }
     }
 }

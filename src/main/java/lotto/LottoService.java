@@ -12,17 +12,13 @@ import static camp.nextstep.edu.missionutils.Console.readLine;
  * 저작권 주의
  */
 public class LottoService {
-    private TotalAmount totalAmount;
-    private LottoCollection lottoCollection;
-    private WinningNumber winningNumber;
-    private BonusNumber bonusNumber;
     public void play() {
-        totalAmount = new TotalAmount();
-        totalAmount.setBuyAmount();
-        lottoCollection = new LottoCollection(totalAmount.getNumOfLotto());
+        TotalAmount totalAmount = new TotalAmount();
+        LottoCollection lottoCollection = new LottoCollection(totalAmount.getNumOfLotto());
         lottoCollection.printLottos();
-        winningNumber = new WinningNumber();
-        bonusNumber = new BonusNumber();
-        lottoCollection.compareWinningNumAndBonusNum(winningNumber,bonusNumber);
+        WinningNumber winningNumber = new WinningNumber();
+        BonusNumber bonusNumber = new BonusNumber();
+
+        lottoCollection.compareWinningNumAndBonusNum(winningNumber, bonusNumber);
     }
 }

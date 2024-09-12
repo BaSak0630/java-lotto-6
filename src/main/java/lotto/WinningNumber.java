@@ -52,4 +52,10 @@ public class WinningNumber {
         if(duplicateSet.size()!= winningNumList.size()) throw new IllegalArgumentException("[ERROR] 당첨 번호는 중복을 허용하지 않습니다.");
     }
 
+    public void compareLotto(Lotto lotto, BonusNumber bonusNumber) {
+
+        for(Integer winningNum : winningNumList){
+
+        }
+    }
 }

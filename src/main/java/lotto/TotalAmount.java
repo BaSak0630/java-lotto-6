@@ -22,9 +22,10 @@ public class TotalAmount {
         this.numOfLotto = 0;
         this.winningAmount = 0;
         this.rateOfReturn = 0.0;
+        readBuyAmount();
     }
 
-    public void setBuyAmount() {
+    public void readBuyAmount() {
         System.out.println("구입금액을 입력해 주세요.");
         try {
             this.buyAmount = Integer.parseInt(readLine());
