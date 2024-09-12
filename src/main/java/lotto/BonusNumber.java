@@ -1,5 +1,7 @@
 package lotto;
 
+import java.util.List;
+
 import static camp.nextstep.edu.missionutils.Console.readLine;
 /*
  * 클래스 이름 BonusNumber
@@ -33,5 +35,9 @@ public class BonusNumber {
         }
 
         System.out.println();
+    }
+
+    public boolean isBonus(List<Integer> numbers) {
+        return numbers.contains(number);
     }
 }
