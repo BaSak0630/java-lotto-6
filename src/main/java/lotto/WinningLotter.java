@@ -16,4 +16,12 @@ public class WinningLotter {
         this.lotto = lotto;
         this.rank = rank;
     }
+
+    public int getReward() {
+        return rank.getReward();
+    }
+
+    public int getRank() {
+        return rank.getRank();
+    }
 }

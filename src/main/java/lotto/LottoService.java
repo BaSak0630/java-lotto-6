@@ -1,5 +1,7 @@
 package lotto;
 
+import java.util.List;
+
 import static camp.nextstep.edu.missionutils.Console.readLine;
 
 /*
@@ -20,7 +22,8 @@ public class LottoService {
         BonusNumber bonusNumber = new BonusNumber();
 
         lottoCollection.compareWinningNumAndBonusNum(winningNumber, bonusNumber);
-
-
+        List<WinningLotter> winningLottos = lottoCollection.getWinningLottos();
+        totalAmount.getStatistics(winningLottos);
+        totalAmount.printStatistics(winningLottos);
     }
 }
